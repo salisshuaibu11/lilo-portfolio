@@ -1,5 +1,4 @@
-import "./styles/Home.css";
-import "./Home.css";
+import "../styles/Home.css";
 import HeaderImage from "../../assets/images/headerImage.png";
 
 import managementIcon from "../../assets/icons/management.svg";
@@ -11,28 +10,20 @@ import featureFirstIcon from "../../assets/images/featureFirst.png";
 //import featureSecondIcon from "../../assets/images/featureSecond.png";
 import featureThirdIcon from "../../assets/images/featureThird.png";
 import about from "../../assets/images/about.png";
+import project from "../../assets/images/project.png";
 //import contactImage from "../../assets/images/contact.png";
 
 import users from "../../assets/icons/user.svg";
-import project from "../../assets/icons/project.svg";
 import client from "../../assets/icons/client.svg";
 
-//import projectDetail from "../../assets/icons/project.svg";
-
-import userOne from "../assets/images/user.png";
-import time from "../assets/icons/time.svg";
-import projectDetail from "../assets/icons/project.svg";
-import dollar from "../assets/icons/dollar.svg";
 import ProjectSmall from '../../components/Project/ProjectSmall';
 import Companies from '../../components/Companies';
 
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-import Contact from "../components/Contact";
-import Subscribe from "../components/Subscribe";
-import Project from "../components/Project";
+import Contact from "../../components/Contact";
+import Subscribe from "../../components/Subscribe";
 
 function Home() {
+  const empty = new Array(5);
   return (
     <>
       <section className="w-screen mt-1 px-14 header h-screen">
@@ -271,7 +262,7 @@ function Home() {
             vitae volutpat ullamcorper enim.
           </p>
         </div>
-        <article
+        <div
           style={{ height: "fit-content" }}
           className="bg-gray-900 px-24 py-10 grid grid-cols-3 gap-5"
         >
@@ -310,7 +301,6 @@ function Home() {
       </section>
       <Subscribe />
       <Contact />
-      <Footer />
     </>
   );
 }

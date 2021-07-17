@@ -1,4 +1,4 @@
-import "./Projects.css";
+import "../styles/Projects.css";
 import HeaderImage from "../../assets/images/projects-headerImage.png";
 import LetsStartImage from "../../assets/images/Ellipse 86.png";
 
@@ -30,7 +30,7 @@ function Projects() {
   const emptySix = new Array(6);
   return (
     <>
-      <section className="bg-gray-900 text-white w-screen mt-1 px-14 header h-50">
+      <section className="bg-gray-900 text-white w-screen mt-1 px-14 h-50">
         <div className="w-full h-full flex">
           <div className="mt-24 p-16 w-2/3">
             <div className="">
@@ -47,7 +47,7 @@ function Projects() {
                 <div style={{ backgroundColor: "#FF5C00" }} className='w-1/6 rounded-r-md px-11 py-4'>/</div>
               </label>
             </div>
-            <div className="header__bottom mt-10 flex flex-row relative">
+            <div className="mt-10 flex flex-row relative">
               <img src={LetsStartImage} alt="Lets start" width='60' height='60'/>
               <span className='bg-gray-800 rounded-md m-0 mt-4 h-6 w-max px-2'>Lets Chat</span>
               <LetsTalk 
@@ -61,7 +61,7 @@ function Projects() {
               */}
             </div>
           </div>
-          <article className="header__right w-1/3 flex items-center relative">
+          <article className="w-1/3 flex items-center relative">
             <div style={{
               backgroundImage: `url(${HeaderImage})`,
               backgroundPosition: 'center',
@@ -78,7 +78,7 @@ function Projects() {
       <section className="bg-gray-200 w-full header__companies flex justify-evenly">
         <Companies />
       </section>
-      <section className="bg-white text-black w-screen mt-1 px-14 header h-50">
+      <section className="bg-white text-black w-screen mt-1 px-14 h-50">
         <div
           style={{ height: "fit-content" }}
           className="py-10 grid grid-cols-3 gap-5"
@@ -107,10 +107,10 @@ function Projects() {
           }
         </div>
       </section>
-      <section className="bg-white text-black w-screen mt-1 px-14 header h-50">
+      <section className="bg-white text-black w-screen mt-1 px-14 h-50">
         <img src={UIUXBanner} alt="UI/UX" />
       </section>
-      <section className="bg-checkerWhite text-black w-screen mt-1 p-14 header h-50">
+      <section className="bg-checkerWhite text-black w-screen mt-1 p-14 h-50">
         {/* Header */}
         <div className="w-full h-full flex flex-col">
           <div className="bg-cartonBrown flex flex-row rounded-t-lg">
@@ -119,7 +119,7 @@ function Projects() {
             </div>
             <div className='bg-checkerWhite w-9/12 h-max rounded-bl-lg'></div>
           </div>
-          <div className="bg-cartonBrown header__bottom py-5 flex flex-col relative rounded-b-lg rounded-tr-lg">
+          <div className="bg-cartonBrown py-5 flex flex-col relative rounded-b-lg rounded-tr-lg">
             <p className="my-2 mx-20 px-20 text-center">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu
               vitae sit congue venenatis hac viverra imperdiet viverra
@@ -149,7 +149,7 @@ function Projects() {
           }
         </div>
       </section>
-      <section className="bg-white text-black w-screen mt-1 p-14 header h-50">
+      <section className="bg-white text-black w-screen mt-1 p-14 h-50">
         {/* Header */}
         <div className="w-full h-full flex flex-col">
           <h1 className="text-2xl text-center">

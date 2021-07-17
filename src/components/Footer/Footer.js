@@ -1,4 +1,6 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFacebookF, faInstagram, faTwitter, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 
 const Footer = ( props )=>{
 	return (
@@ -12,6 +14,16 @@ const Footer = ( props )=>{
       			<a href="/career" className="block font-thin mb-2 text-white">Sales@mycompany.com</a>
       			<a href="/courses" className="block font-thin mb-2 text-white">technical@myconpany.com</a>
       		</div>
+          <div className="text-white">
+            <h5>Social Media</h5>
+            <div className="space-x-5">
+              <a href="#facebook"><FontAwesomeIcon icon={faFacebookF} /></a>
+              <a href="#insta"><FontAwesomeIcon icon={faInstagram} /></a>
+
+              <a href="#twiter"><FontAwesomeIcon icon={faTwitter} /></a>
+              <a href="#linkedin"><FontAwesomeIcon icon={faLinkedinIn} /></a>
+            </div>
+          </div>
       	</div>
       	<div className="mr-20 mb-10">
       		<h2 className="uppercase text-xl font-bold text-white">Our Services</h2>

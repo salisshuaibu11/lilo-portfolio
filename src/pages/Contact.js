@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import React from "react";
 
 import contact from "../assets/images/contact_header_image.png";
 

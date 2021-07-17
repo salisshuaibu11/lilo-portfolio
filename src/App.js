@@ -17,7 +17,6 @@ import Projects from "./pages/Projects/Projects";
 function App() {
   return (
     <div className="app">
-
       <Router>
         <Navigation />
         <Switch>
@@ -29,6 +28,12 @@ function App() {
           </Route>
           <Route path='/catalogue' exact>
             <Catalogue />
+          </Route>
+          <Route path='/signup' exact>
+            <Signup />
+          </Route>
+          <Route path='/contact' exact>
+            <Contact />
           </Route>
           <Redirect to='/' />
         </Switch>

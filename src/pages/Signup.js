@@ -13,10 +13,10 @@ function Signup() {
         </div>
         <div className="header__center text-center py-3 text-white">
           <div className="header__center__top space-x-5">
-            <a href="#">Home</a>
-            <a href="#">About Us</a>
-            <a href="#">Project</a>
-            <a href="#">Contact Us</a>
+            <a href="#home">Home</a>
+            <a href="#about-us">About Us</a>
+            <a href="#project">Project</a>
+            <a href="#contact-us">Contact Us</a>
           </div>
           <div className="header__center__bottom text-5xl">
             Sign Up
