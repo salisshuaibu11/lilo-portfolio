@@ -1,0 +1,11 @@
+.catalogue__left {
+  width: 50%;
+}
+
+.catalogue__right {
+  width: 50%;
+}
+
+.top__ranked > article > img {
+  width: 20%;
+}

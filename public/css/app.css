@@ -1,0 +1,23 @@
+.bg-teal-primary {
+    background: #03A397;
+}
+.text-teal-primary {
+    color: #03A397;
+}
+
+
+.border-teal-primary {
+    border:2px solid #03A397;
+}
+
+
+#cover{
+    position:fixed;
+    top:0;
+    left:0;
+    background:rgba(0,0,0,0.8);
+    z-index:5;
+    width:100%;
+    height:100%;
+    display:none;
+}

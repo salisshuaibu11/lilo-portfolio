@@ -1,3 +1,4 @@
+import "./styles/Home.css";
 import "./Home.css";
 import HeaderImage from "../../assets/images/headerImage.png";
 
@@ -18,11 +19,20 @@ import client from "../../assets/icons/client.svg";
 
 //import projectDetail from "../../assets/icons/project.svg";
 
+import userOne from "../assets/images/user.png";
+import time from "../assets/icons/time.svg";
+import projectDetail from "../assets/icons/project.svg";
+import dollar from "../assets/icons/dollar.svg";
 import ProjectSmall from '../../components/Project/ProjectSmall';
 import Companies from '../../components/Companies';
 
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import Contact from "../components/Contact";
+import Subscribe from "../components/Subscribe";
+import Project from "../components/Project";
+
 function Home() {
-  const empty = new Array(3);
   return (
     <>
       <section className="w-screen mt-1 px-14 header h-screen">
@@ -249,19 +259,19 @@ function Home() {
         </div>
       </section>
       <section className="projects w-screen mt-10">
-        <div className="text-center px-24">
+        <div className="text-center px-24 mx-auto" style={{width: '70%'}}>
           <h2 style={{ color: "#FF5C00" }}>Our Project</h2>
           <h4 className="font-bold my-2">
             We are your Best choice, now and ever?
           </h4>
-          <p className="font-extralight">
+          <p className="font-extralight mb-3">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci fusce
             blandit facilisis enim potenti vulputate quisque. Nunc suspendisse
             urna lobortis quisque pellentesque tempor, pellentesque tortor. Est,
             vitae volutpat ullamcorper enim.
           </p>
         </div>
-        <div
+        <article
           style={{ height: "fit-content" }}
           className="bg-gray-900 px-24 py-10 grid grid-cols-3 gap-5"
         >
@@ -298,49 +308,9 @@ function Home() {
           </div>
         </div>
       </section>
-      <section className="subscribe px-14 mt-10">
-        <div className="px-32 h-72 rounded-lg py-5 bg-gradient-to-r from-pink-400 via-red-500 to-yellow-500 text-center">
-          <h4>Subscribe to the news-letter to recieve latest informtion about our services</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices aliquam sit vestibulum, duis nunc, velit. Bibendum egestas eleifend lacus proin ultrices ut tristique. Vitae phasellus mauris lectus pharetra dolor, hendrerit dictum</p>
-          <form className="w-full mt-10 relative">
-            <input className="w-full outline-none rounded-full py-3 px-5" placeholder="input your email address for best offers" />
-            <button style={{right: '0.1rem', top: '0.2rem'}} className="text-white bg-red-400 px-10 py-2 absolute rounded-full">Subscribe</button>
-          </form>
-        </div>
-      </section>
-      <section className="contact w-screen px-32 mt-10">
-        <form className="w-full px-14 py-3 bg-gray-300">
-          <h2 className="mb-5">Contact form</h2>
-          <div className="w-4/5 mb-5">
-              <label htmlFor="name">Name</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                className="w-full px-4 py-2 text-gray-600 rounded-md outline-none md:px-8 focus:shadow-xl" placeholder="Full Name"/>
-          </div>
-          <div className="w-4/5 mb-5">
-              <label htmlFor="email">Email</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                className="w-full px-4 py-2 text-gray-600 rounded-md outline-none md:px-8 focus:shadow-xl" placeholder="Full Name"/>
-          </div>
-          <div className="w-4/5 mb-5">
-              <label htmlFor="message">Message</label>
-              <textarea
-                rows="7"
-                id="message"
-                name="message"
-                className="w-full px-4 py-2 text-gray-600 rounded-md outline-none md:px-8 focus:shadow-xl">
-                </textarea>
-          </div>
-          <div className="w-4/5 mb-5">
-              <button style={{width: "222px"}} type="button" className="py-2 bg-white text-center rounded-full">Envoyez</button>
-          </div>
-        </form>
-      </section>
+      <Subscribe />
+      <Contact />
+      <Footer />
     </>
   );
 }
