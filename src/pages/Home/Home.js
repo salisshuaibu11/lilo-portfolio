@@ -1,40 +1,31 @@
-import "./styles/Home.css";
-import HeaderImage from "../assets/images/headerImage.png";
+import "../styles/Home.css";
+import HeaderImage from "../../assets/images/headerImage.png";
 
-import managementIcon from "../assets/icons/management.svg";
-import learningIcon from "../assets/icons/learning.svg";
-import marketingIcon from "../assets/icons/marketing.svg";
-import programmingIcon from "../assets/icons/programming.svg";
+import managementIcon from "../../assets/icons/management.svg";
+import learningIcon from "../../assets/icons/learning.svg";
+import marketingIcon from "../../assets/icons/marketing.svg";
+import programmingIcon from "../../assets/icons/programming.svg";
 
-import featureFirstIcon from "../assets/images/featureFirst.png";
-import featureSecondIcon from "../assets/images/featureSecond.png";
-import featureThirdIcon from "../assets/images/featureThird.png";
-import about from "../assets/images/about.png";
+import featureFirstIcon from "../../assets/images/featureFirst.png";
+//import featureSecondIcon from "../../assets/images/featureSecond.png";
+import featureThirdIcon from "../../assets/images/featureThird.png";
+import about from "../../assets/images/about.png";
+import project from "../../assets/images/project.png";
+//import contactImage from "../../assets/images/contact.png";
 
-import perxels from "../assets/icons/perxels.svg";
-import udemy from "../assets/icons/udemy.svg";
-import google from "../assets/icons/google.svg";
-import uplers from "../assets/icons/uplers.svg";
+import users from "../../assets/icons/user.svg";
+import client from "../../assets/icons/client.svg";
 
-import users from "../assets/icons/user.svg";
-import project from "../assets/icons/project.svg";
-import client from "../assets/icons/client.svg";
+import ProjectSmall from '../../components/Project/ProjectSmall';
+import Companies from '../../components/Companies';
 
-import userOne from "../assets/images/user.png";
-import time from "../assets/icons/time.svg";
-import projectDetail from "../assets/icons/project.svg";
-import dollar from "../assets/icons/dollar.svg";
-
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-import Contact from "../components/Contact";
-import Subscribe from "../components/Subscribe";
-import Project from "../components/Project";
+import Contact from "../../components/Contact";
+import Subscribe from "../../components/Subscribe";
 
 function Home() {
+  const empty = new Array(5);
   return (
     <>
-      <Navbar />
       <section className="w-screen mt-1 px-14 header h-screen">
         <div className="w-full h-full flex">
           <div className="header__left  py-16">
@@ -69,33 +60,30 @@ function Home() {
             <div className="header__right__cards z-50">
               <div className="header__right__top space-y-4">
                 <div className="flex bg-white shadow-lg management rounded-full py-3 px-10 items-center space-x-3">
-                  <img className="w-6" src={managementIcon} alt="Management" />
+                  <img className="w-6" src={managementIcon} alt="Management Icon" />
                   <span>Management</span>
                 </div>
                 <div className="flex bg-white shadow-lg rounded-full py-3 px-10 items-center space-x-3">
-                  <img className="w-6" src={learningIcon} alt="Management" />
+                  <img className="w-6" src={learningIcon} alt="Learning Icon" />
                   <span>Learning</span>
                 </div>
               </div>
               <div className="header__right__bottom space-y-4">
                 <div className="flex bg-white shadow-lg rounded-full py-3 px-10 items-center space-x-3">
-                  <img className="w-6" src={marketingIcon} alt="Management" />
+                  <img className="w-6" src={marketingIcon} alt="Marketing Icon" />
                   <span>Marketing</span>
                 </div>
                 <div className="flex programming bg-white shadow-lg rounded-full py-3 px-10 items-center space-x-3">
-                  <img className="w-6" src={programmingIcon} alt="Management" />
+                  <img className="w-6" src={programmingIcon} alt="Programming Icon" />
                   <span>Programming</span>
                 </div>
               </div>
             </div>
-            <img src={HeaderImage} alt="Header background image" />
+            <img src={HeaderImage} alt="Header background" />
           </article>
         </div>
         <div className="w-full header__companies flex justify-evenly">
-          <img src={perxels} alt="pexels" />
-          <img src={udemy} alt="udemy" />
-          <img src={google} alt="google" />
-          <img src={uplers} alt="uplers" />
+          <Companies />
         </div>
       </section>
       <section className="w-screen mt-32 services">
@@ -274,123 +262,20 @@ function Home() {
             vitae volutpat ullamcorper enim.
           </p>
         </div>
-        <article
+        <div
           style={{ height: "fit-content" }}
           className="bg-gray-900 px-24 py-10 grid grid-cols-3 gap-5"
         >
-          <Project
-            userOne={userOne}
-            time={time}
-            projectDetail={projectDetail}
-            dollarSign={dollar}
-            client={client}
-          />
-
-          <div className="bg-white" style={{ height: "24rem" }}>
-            <div className="project__header rounded-md h-full">
-              <div className="project__header__top">
-                <div className="w-full flex items-start p-2 justify-between">
-                  <span className="flex items-center">
-                    <img className="mr-3" src={time} alt="Time" /> 13/07/2021
-                  </span>
-                  <div className="flex items-start">
-                    <img
-                      className="object-contain"
-                      src={userOne}
-                      alt="user one"
-                    />
-                    <img
-                      className="object-contain"
-                      src={userOne}
-                      alt="user one"
-                    />
-                    <img
-                      className="object-contain"
-                      src={userOne}
-                      alt="user one"
-                    />
-                  </div>
+          {
+            empty.fill(0, 0).map((e, i)=>{
+              return (
+                <div className="bg-white" style={{ height: "24rem" }} key={i}>
+                  <ProjectSmall />
                 </div>
-
-                <div className="project__header__bottom p-2 bg-gray-50 opacity-60">
-                  <p className="flex items-center">
-                    <img src={client} className="mr-3" alt="" /> Author of
-                    publication
-                  </p>
-                  <p className="flex items-center">
-                    <img src={projectDetail} className="w-5 mr-3" alt="" />{" "}
-                    Duration of projects
-                  </p>
-                  <p className="flex items-center">
-                    <img src={dollar} className="w-5 mr-3" alt="" /> 6000.00
-                  </p>
-                </div>
-              </div>
-              <div className="project__footer text-center py-3">
-                <p className="mb-2">Lorem ipsum dolor sit amet!</p>
-                <button
-                  className="rounded-full text-white py-2"
-                  style={{ width: "80%", backgroundColor: "#FF5C00" }}
-                >
-                  More Details
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <div className="bg-white" style={{ height: "24rem" }}>
-            <div className="project__header rounded-md h-full">
-              <div className="project__header__top">
-                <div className="w-full flex items-start p-2 justify-between">
-                  <span className="flex items-center">
-                    <img className="mr-3" src={time} alt="Time" /> 13/07/2021
-                  </span>
-                  <div className="flex items-start">
-                    <img
-                      className="object-contain"
-                      src={userOne}
-                      alt="user one"
-                    />
-                    <img
-                      className="object-contain"
-                      src={userOne}
-                      alt="user one"
-                    />
-                    <img
-                      className="object-contain"
-                      src={userOne}
-                      alt="user one"
-                    />
-                  </div>
-                </div>
-
-                <div className="project__header__bottom p-2 bg-gray-50 opacity-60">
-                  <p className="flex items-center">
-                    <img src={client} className="mr-3" alt="" /> Author of
-                    publication
-                  </p>
-                  <p className="flex items-center">
-                    <img src={projectDetail} className="w-5 mr-3" alt="" />{" "}
-                    Duration of projects
-                  </p>
-                  <p className="flex items-center">
-                    <img src={dollar} className="w-5 mr-3" alt="" /> 6000.00
-                  </p>
-                </div>
-              </div>
-              <div className="project__footer text-center py-3">
-                <p className="mb-2">Lorem ipsum dolor sit amet!</p>
-                <button
-                  className="rounded-full text-white py-2"
-                  style={{ width: "80%", backgroundColor: "#FF5C00" }}
-                >
-                  More Details
-                </button>
-              </div>
-            </div>
-          </div>
-
-        </article>
+              );
+            })
+          }
+        </div>
       </section>
       <section className="about w-screen relative px-32 mt-10">
         <div style={{left: '32rem', top: '-1rem', zIndex: '-999'}} className="h-32 w-32 bg-red-300 absolute"></div>
@@ -416,7 +301,6 @@ function Home() {
       </section>
       <Subscribe />
       <Contact />
-      <Footer />
     </>
   );
 }

@@ -29,7 +29,7 @@ import dollar from "../assets/icons/dollar.svg";
 import client from "../assets/icons/client.svg";
 
 import Project from "../components/Project";
-import Footer from "../components/Footer";
+import Footer from "../components/Footer/Footer";
 
 function Catalogue() {
   useEffect(() => {

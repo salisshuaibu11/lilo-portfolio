@@ -1,0 +1,20 @@
+.white-backdrop::before, .white-backdrop::after{
+	content: "";
+	height: 6vh;
+	position: absolute;
+	width: 20rem;
+	box-sizing: border-box;
+}
+.white-backdrop::before, .white-backdrop::after {
+	background-color: white;
+}
+
+.white-backdrop::before{/*, .black-border::before {*/
+	clip-path: polygon(0 100%, 100% 0, 100% 100%, 0 100%);
+	bottom: 100%;
+}
+
+.white-backdrop::after{/*, .black-border::after {*/
+	clip-path: polygon(0 100%, 100% 0, 100% 0, 0 0);
+	top: 100%;
+}

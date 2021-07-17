@@ -1,10 +1,10 @@
-import { useEffect } from "react";
+import React from "react";
 
 import contact from "../assets/images/contact_header_image.png";
 
 import ContactComponent from "../components/Contact";
 import Subscribe from "../components/Subscribe";
-import Footer from "../components/Footer";
+import Footer from "../components/Footer/Footer";
 
 import "./styles/Contact.css";
 
