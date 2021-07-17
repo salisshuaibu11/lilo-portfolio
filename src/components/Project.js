@@ -1,9 +1,11 @@
+import "./styles/Project.css"
+
 function Project({
   userOne, projectDetail, time, duration, price, client, dollarSign
 }) {
   return (
-    <div className="bg-white rounded-lg mr-4" style={{ height: "24rem" }}>
-      <div className="project__header rounded-md h-full">
+    <div className="bg-white rounded-lg mr-4" style={{ height: "25rem" }}>
+      <div className="project__header flex-col rounded-md h-full">
         <div className="project__header__top">
           <div className="w-full flex items-start p-2 justify-between">
             <span className="flex items-center">

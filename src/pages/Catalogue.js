@@ -41,12 +41,42 @@ function Catalogue() {
 			adaptiveHeight: true,
 			autoplay: true,
 			autoplaySpeed: 3000,
-			arrows: false
+			arrows: false,
+      responsive: [
+        {
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                infinite: true,
+                dots: true
+            }
+        },
+
+        {
+            breakpoint: 600,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                infinite: true,
+                dots: true
+            }
+        },
+        {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                infinite: true,
+                dots: true
+            }
+        }
+      ]
 		});
   })
   return(
     <>
-      <header className="bg-gray-900">
+      <header className="bg-gray-900 w-screen">
         <nav className="flex text-white justify-end pr-5 w-screen py-2">
           <ul className="flex items-center space-x-3">
             <li className="">
@@ -63,7 +93,7 @@ function Catalogue() {
             </li>
           </ul>
         </nav>
-        <div className="w-full items-center py-10 flex px-32 mt-13">
+        <div className="w-full items-center py-10 flex md:px-32 px-5 mt-13">
           <div className="catalogue__left" style={{marginRight: "12rem"}}>
             <h1 className="text-2xl font-bold text-white">
               Achieve your goal with professionals or guarantee success
@@ -78,7 +108,7 @@ function Catalogue() {
               Add New Project
             </button>
           </div>
-          <div className="catalogue__right">
+          <div className="catalogue__right hidden md:block">
             <img src={image2} alt="" />
           </div>
         </div>
@@ -89,7 +119,7 @@ function Catalogue() {
         <img src={google} alt="google" />
         <img src={uplers} alt="uplers" />
       </section>
-      <section className="w-screen top__ranked px-24 bg-gray-100">
+      <section className="w-screen top__ranked xl:px-24 px-10 bg-gray-100">
         <h3 className="mb-3 text-lg">Top ranked projects</h3>
         <article className="w-screen flex space-x-3 mb-5">
           <img src={project1} alt="Project One" />
@@ -97,14 +127,18 @@ function Catalogue() {
           <img src={project3} alt="Project Three" />
           <img src={project4} alt="Project Four" />
         </article>
-        <article className="w-scree">
-          <img style={{width: '95%', height: '20%'}} src={digital} alt="" />
+        {/*
+        <article className="w-screen bg-red-500">
+          <div>
+              <img src={digital} alt="" />
+          </div>
         </article>
+        */}
       </section>
-      <section className="projects w-screen py-10 px-24 bg-gray-200">
+      <section className="projects w-screen py-10 xl:px-24 px-10 bg-gray-200">
         <div className="projects__header">
           <h2 className="w-44 text-center py-2 rounded-tl-lg rounded-tr-lg bg-white font-bold">Project Header</h2>
-          <article className="bg-white grid grid-cols-7 gap-3 pt-8 pb-2 rounded-tr-lg rounded-bl-lg rounded-br-lg">
+          <article className="bg-white grid grid-cols-3 xl:grid-cols-7 gap-3 pt-8 pb-2 rounded-tr-lg rounded-bl-lg rounded-br-lg">
             <div>
               <img className="mx-auto" src={marketing} alt="Marketing" />
               <h4 className="text-xl text-center">Marketing</h4>
@@ -135,6 +169,7 @@ function Catalogue() {
             </div>
           </article>
         </div>
+
 
         <div className="mt-10">
           <h2 className="text-xl -mb-8">Marketing Project</h2>
@@ -241,6 +276,60 @@ function Catalogue() {
 
           </article>
         </div>
+
+        <div className="mt-10">
+          <h2 className="text-xl -mb-8">Design</h2>
+          <article
+            style={{ height: "fit-content" }}
+            className="py-10 testimonials">
+            <Project
+              userOne={userOne}
+              time={time}
+              projectDetail={projectDetail}
+              dollarSign={dollar}
+              client={client}
+              price="6,000.00"
+            />
+
+            <Project
+              userOne={userOne}
+              time={time}
+              projectDetail={projectDetail}
+              dollarSign={dollar}
+              client={client}
+              price="6,000.00"
+            />
+
+            <Project
+              userOne={userOne}
+              time={time}
+              projectDetail={projectDetail}
+              dollarSign={dollar}
+              client={client}
+              price="6,000.00"
+            />
+
+            <Project
+              userOne={userOne}
+              time={time}
+              projectDetail={projectDetail}
+              dollarSign={dollar}
+              client={client}
+              price="6,000.00"
+            />
+
+            <Project
+              userOne={userOne}
+              time={time}
+              projectDetail={projectDetail}
+              dollarSign={dollar}
+              client={client}
+              price="6,000.00"
+            />
+
+          </article>
+        </div>
+
       </section>
       <Footer />
     </>

@@ -35,10 +35,10 @@ function Home() {
   return (
     <>
       <Navbar />
-      <section className="w-screen mt-1 px-14 header h-screen">
-        <div className="w-full h-full flex">
-          <div className="header__left  py-16">
-            <div className="header__top">
+      <section className="w-screen mt-1 home h-screen">
+        <div className="w-full px-10 flex" style={{height: 'fit-content'}}>
+          <div className="home__left self-center w-screen  py-16">
+            <div className="home__top">
               <h1 className="text-2xl">
                 Empower your <span style={{ color: "#FF5C00" }}>Business</span>,
                 Skill, Education and Project with{" "}
@@ -50,7 +50,7 @@ function Home() {
                 volutpat.
               </p>
             </div>
-            <div className="header__bottom space-x-4">
+            <div className="home__bottom space-x-4">
               <button
                 style={{ backgroundColor: "#FF5C00" }}
                 className="text-white rounded-full px-6 py-2"
@@ -65,9 +65,9 @@ function Home() {
               </button>
             </div>
           </div>
-          <article className="header__right flex items-center">
-            <div className="header__right__cards z-50">
-              <div className="header__right__top space-y-4">
+          <article className="home__right flex items-center">
+            <div className="home__right__cards z-50">
+              <div className="home__right__top space-y-4">
                 <div className="flex bg-white shadow-lg management rounded-full py-3 px-10 items-center space-x-3">
                   <img className="w-6" src={managementIcon} alt="Management" />
                   <span>Management</span>
@@ -77,7 +77,7 @@ function Home() {
                   <span>Learning</span>
                 </div>
               </div>
-              <div className="header__right__bottom space-y-4">
+              <div className="home__right__bottom space-y-4">
                 <div className="flex bg-white shadow-lg rounded-full py-3 px-10 items-center space-x-3">
                   <img className="w-6" src={marketingIcon} alt="Management" />
                   <span>Marketing</span>
@@ -91,7 +91,7 @@ function Home() {
             <img src={HeaderImage} alt="Header background image" />
           </article>
         </div>
-        <div className="w-full header__companies flex justify-evenly">
+        <div className="w-full home__companies flex justify-evenly">
           <img src={perxels} alt="pexels" />
           <img src={udemy} alt="udemy" />
           <img src={google} alt="google" />
@@ -116,7 +116,7 @@ function Home() {
               <button>Education</button>
               <button>Others</button>
             </div>
-            <div className="services__cards grid grid-cols-3 gap-10 p-20">
+            <div className="services__cards grid xl:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 grid-cols-1 gap-10 p-20">
               <div className="service text-center">
                 <h3 className="font-bold">SEO</h3>
                 <p className="my-8 text-justify">
@@ -175,7 +175,7 @@ function Home() {
             interdum dolor enim justo.
           </p>
         </div>
-        <div className="features__cards grid grid-cols-3 gap-10 p-20">
+        <div className="features__cards grid xl:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 grid-cols-1 gap-10 p-20">
           <div className="feature feature__one text-center p-5">
             <img
               className="mx-auto"
@@ -276,7 +276,7 @@ function Home() {
         </div>
         <article
           style={{ height: "fit-content" }}
-          className="bg-gray-900 px-24 py-10 grid grid-cols-3 gap-5"
+          className="bg-gray-900 px-24 py-10 grid xl:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 grid-cols-1 gap-5"
         >
           <Project
             userOne={userOne}
@@ -286,120 +286,36 @@ function Home() {
             client={client}
           />
 
-          <div className="bg-white" style={{ height: "24rem" }}>
-            <div className="project__header rounded-md h-full">
-              <div className="project__header__top">
-                <div className="w-full flex items-start p-2 justify-between">
-                  <span className="flex items-center">
-                    <img className="mr-3" src={time} alt="Time" /> 13/07/2021
-                  </span>
-                  <div className="flex items-start">
-                    <img
-                      className="object-contain"
-                      src={userOne}
-                      alt="user one"
-                    />
-                    <img
-                      className="object-contain"
-                      src={userOne}
-                      alt="user one"
-                    />
-                    <img
-                      className="object-contain"
-                      src={userOne}
-                      alt="user one"
-                    />
-                  </div>
-                </div>
+          <Project
+            userOne={userOne}
+            time={time}
+            projectDetail={projectDetail}
+            dollarSign={dollar}
+            client={client}
+          />
 
-                <div className="project__header__bottom p-2 bg-gray-50 opacity-60">
-                  <p className="flex items-center">
-                    <img src={client} className="mr-3" alt="" /> Author of
-                    publication
-                  </p>
-                  <p className="flex items-center">
-                    <img src={projectDetail} className="w-5 mr-3" alt="" />{" "}
-                    Duration of projects
-                  </p>
-                  <p className="flex items-center">
-                    <img src={dollar} className="w-5 mr-3" alt="" /> 6000.00
-                  </p>
-                </div>
-              </div>
-              <div className="project__footer text-center py-3">
-                <p className="mb-2">Lorem ipsum dolor sit amet!</p>
-                <button
-                  className="rounded-full text-white py-2"
-                  style={{ width: "80%", backgroundColor: "#FF5C00" }}
-                >
-                  More Details
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <div className="bg-white" style={{ height: "24rem" }}>
-            <div className="project__header rounded-md h-full">
-              <div className="project__header__top">
-                <div className="w-full flex items-start p-2 justify-between">
-                  <span className="flex items-center">
-                    <img className="mr-3" src={time} alt="Time" /> 13/07/2021
-                  </span>
-                  <div className="flex items-start">
-                    <img
-                      className="object-contain"
-                      src={userOne}
-                      alt="user one"
-                    />
-                    <img
-                      className="object-contain"
-                      src={userOne}
-                      alt="user one"
-                    />
-                    <img
-                      className="object-contain"
-                      src={userOne}
-                      alt="user one"
-                    />
-                  </div>
-                </div>
-
-                <div className="project__header__bottom p-2 bg-gray-50 opacity-60">
-                  <p className="flex items-center">
-                    <img src={client} className="mr-3" alt="" /> Author of
-                    publication
-                  </p>
-                  <p className="flex items-center">
-                    <img src={projectDetail} className="w-5 mr-3" alt="" />{" "}
-                    Duration of projects
-                  </p>
-                  <p className="flex items-center">
-                    <img src={dollar} className="w-5 mr-3" alt="" /> 6000.00
-                  </p>
-                </div>
-              </div>
-              <div className="project__footer text-center py-3">
-                <p className="mb-2">Lorem ipsum dolor sit amet!</p>
-                <button
-                  className="rounded-full text-white py-2"
-                  style={{ width: "80%", backgroundColor: "#FF5C00" }}
-                >
-                  More Details
-                </button>
-              </div>
-            </div>
-          </div>
+          <Project
+            userOne={userOne}
+            time={time}
+            projectDetail={projectDetail}
+            dollarSign={dollar}
+            client={client}
+          />
 
         </article>
       </section>
-      <section className="about w-screen relative px-32 mt-10">
-        <div style={{left: '32rem', top: '-1rem', zIndex: '-999'}} className="h-32 w-32 bg-red-300 absolute"></div>
-        <div style={{top: '15rem', left: '7rem', zIndex: '-999'}} className="h-32 w-32 bg-red-300 absolute"></div>
-        <div className="w-full h-full flex items-center">
+      <section className="about w-screen relative xl:px-14 px-5 mt-10">
+        {/*<div className="hidden xl:block" style={{left: '32rem', top: '-1rem', zIndex: '-999'}} className="h-32 w-32 bg-red-300 absolute"></div>
+        <div
+          className="hidden xl:block"
+          style={{top: '15rem', left: '7rem', zIndex: '-999'}}
+          className="h-32 w-32 bg-red-300 absolute">
+        </div>*/}
+        <div className="w-full space-x-3 grid sm:grid-cols-2 grid-cols-1">
           <div className="project__image">
-            <img src={about} alt="About us" />
+            <img className="h-full object-contain" src={about} alt="About us" />
           </div>
-          <div className="px-24 project__content">
+          <div className="px-5 py-5 project__content">
             <h2 className="font-thin">About Us</h2>
             <h4 className="font-bold my-2">
               Who are we and why we are?

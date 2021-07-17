@@ -6,7 +6,7 @@ import Catalogue from "./pages/Catalogue";
 function App() {
   return (
     <div className="app">
-      <Catalogue />
+      <Contact />
     </div>
   );
 }

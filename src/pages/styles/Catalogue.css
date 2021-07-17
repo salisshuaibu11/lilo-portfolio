@@ -9,3 +9,9 @@
 .top__ranked > article > img {
   width: 20%;
 }
+
+@media only screen and (max-width: 600px) {
+  .catalogue__left {
+    width: 100%;
+  }
+}

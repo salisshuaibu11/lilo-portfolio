@@ -3,8 +3,8 @@ import { faFacebookF, faInstagram, faTwitter, faLinkedinIn } from '@fortawesome/
 
 function Footer() {
   return (
-    <footer class="w-screen bg-gray-900 px-20 mt-10">
-      <div className="flex pt-10">
+    <footer class="w-screen bg-gray-900 xl:px-20 px-10 mt-10">
+      <div className="grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 xl:grid-cols-4 pt-10">
         <div className="flex flex-col">
           <div className="mr-20 mb-10">
             <h2 className="text-md font-bold text-white mb-2">Address</h2>

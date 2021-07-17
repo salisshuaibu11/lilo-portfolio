@@ -1,0 +1,29 @@
+.project__home__top {
+  background: url(../../assets/images/project.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 70%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project__home {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 4px;
+}
+
+.project__home__bottom p > img {
+  width: 5%;
+}
+
+.project__image {
+  flex: 1;
+}
+
+.project__content {
+  flex: 1;
+}

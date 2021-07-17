@@ -1,9 +1,9 @@
 function Subscribe() {
   return (
     <section className="subscribe px-14 mt-10">
-      <div className="px-32 h-72 rounded-lg py-5 bg-gradient-to-r from-pink-400 via-red-500 to-yellow-500 text-center">
+      <div className="xl:px-32 px-10 rounded-lg py-5 bg-gradient-to-r from-pink-400 via-red-500 to-yellow-500 text-center">
         <div style={{width: '70%'}} className="mx-auto">
-          <h4 className="text-3xl" style={{color: '#0A093C'}}>Subscribe to the news-letter to recieve latest informtion about our services</h4>
+          <h4 className="xl:text-3xl text-lg" style={{color: '#0A093C'}}>Subscribe to the news-letter to recieve latest informtion about our services</h4>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices aliquam sit vestibulum, duis nunc, velit. Bibendum egestas eleifend lacus proin ultrices ut tristique. Vitae phasellus mauris lectus pharetra dolor, hendrerit dictum</p>
         </div>
         <form className="w-full mt-10 relative">
