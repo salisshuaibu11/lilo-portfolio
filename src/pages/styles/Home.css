@@ -58,7 +58,7 @@
 }
 
 .project__header__top {
-  background: url(../assets/images/project.png);
+  background: url(../../assets/images/project.png);
   background-repeat: no-repeat;
   background-size: cover;
   height: 70%;

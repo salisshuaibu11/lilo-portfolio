@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-  .app {
-    overflow-x: 'hidden'
-  }
+body {
+  overflow-x: hidden;
 }

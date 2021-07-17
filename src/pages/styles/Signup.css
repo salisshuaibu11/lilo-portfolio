@@ -1,0 +1,27 @@
+.header {
+  background: url(../../assets/images/signup-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: fit-content;
+}
+
+.header > .header__left {
+  width: 25%;
+}
+
+.header > .header__center {
+  width: 55%;
+  height: 15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header > header__right {
+  width: .25%;
+}
+
+
+.signup form input {
+  width: 70%;
+}

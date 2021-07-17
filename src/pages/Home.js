@@ -1,4 +1,4 @@
-import "./Home.css";
+import "./styles/Home.css";
 import HeaderImage from "../assets/images/headerImage.png";
 
 import managementIcon from "../assets/icons/management.svg";
@@ -10,9 +10,7 @@ import featureFirstIcon from "../assets/images/featureFirst.png";
 import featureSecondIcon from "../assets/images/featureSecond.png";
 import featureThirdIcon from "../assets/images/featureThird.png";
 import about from "../assets/images/about.png";
-import contactImage from "../assets/images/contact.png";
 
-import userOne from "../assets/images/user.png";
 import perxels from "../assets/icons/perxels.svg";
 import udemy from "../assets/icons/udemy.svg";
 import google from "../assets/icons/google.svg";
@@ -22,38 +20,21 @@ import users from "../assets/icons/user.svg";
 import project from "../assets/icons/project.svg";
 import client from "../assets/icons/client.svg";
 
+import userOne from "../assets/images/user.png";
 import time from "../assets/icons/time.svg";
 import projectDetail from "../assets/icons/project.svg";
 import dollar from "../assets/icons/dollar.svg";
 
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import Contact from "../components/Contact";
+import Subscribe from "../components/Subscribe";
+import Project from "../components/Project";
+
 function Home() {
   return (
     <>
-      <nav className="flex justify-end pr-5 w-screen">
-        <ul className="flex items-center space-x-3">
-          <li className="border-b border-red-300">
-            <a href="/">Home</a>
-          </li>
-          <li>
-            <a href="/">About us</a>
-          </li>
-          <li>
-            <a href="/">Projects</a>
-          </li>
-          <li>
-            <a href="/">Contact us</a>
-          </li>
-          <li style={{ color: "#FF5C00" }}>
-            <a href="/">Login</a>
-          </li>
-          <li
-            style={{ backgroundColor: "#FF5C00" }}
-            className="px-6 py-1 rounded-md text-white"
-          >
-            <a href="/">Enroll now</a>
-          </li>
-        </ul>
-      </nav>
+      <Navbar />
       <section className="w-screen mt-1 px-14 header h-screen">
         <div className="w-full h-full flex">
           <div className="header__left  py-16">
@@ -281,73 +262,29 @@ function Home() {
         </div>
       </section>
       <section className="projects w-screen mt-10">
-        <div className="text-center px-24">
+        <div className="text-center px-24 mx-auto" style={{width: '70%'}}>
           <h2 style={{ color: "#FF5C00" }}>Our Project</h2>
           <h4 className="font-bold my-2">
             We are your Best choice, now and ever?
           </h4>
-          <p className="font-extralight">
+          <p className="font-extralight mb-3">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci fusce
             blandit facilisis enim potenti vulputate quisque. Nunc suspendisse
             urna lobortis quisque pellentesque tempor, pellentesque tortor. Est,
             vitae volutpat ullamcorper enim.
           </p>
         </div>
-        <div
+        <article
           style={{ height: "fit-content" }}
           className="bg-gray-900 px-24 py-10 grid grid-cols-3 gap-5"
         >
-          <div className="bg-white" style={{ height: "24rem" }}>
-            <div className="project__header rounded-md h-full">
-              <div className="project__header__top">
-                <div className="w-full flex items-start p-2 justify-between">
-                  <span className="flex items-center">
-                    <img className="mr-3" src={time} alt="Time" /> 13/07/2021
-                  </span>
-                  <div className="flex items-start">
-                    <img
-                      className="object-contain"
-                      src={userOne}
-                      alt="user one"
-                    />
-                    <img
-                      className="object-contain"
-                      src={userOne}
-                      alt="user one"
-                    />
-                    <img
-                      className="object-contain"
-                      src={userOne}
-                      alt="user one"
-                    />
-                  </div>
-                </div>
-
-                <div className="project__header__bottom p-2 bg-gray-50 opacity-60">
-                  <p className="flex items-center">
-                    <img src={client} className="mr-3" alt="" /> Author of
-                    publication
-                  </p>
-                  <p className="flex items-center">
-                    <img src={projectDetail} className="w-5 mr-3" alt="" />{" "}
-                    Duration of projects
-                  </p>
-                  <p className="flex items-center">
-                    <img src={dollar} className="w-5 mr-3" alt="" /> 6000.00
-                  </p>
-                </div>
-              </div>
-              <div className="project__footer text-center py-3">
-                <p className="mb-2">Lorem ipsum dolor sit amet!</p>
-                <button
-                  className="rounded-full text-white py-2"
-                  style={{ width: "80%", backgroundColor: "#FF5C00" }}
-                >
-                  More Details
-                </button>
-              </div>
-            </div>
-          </div>
+          <Project
+            userOne={userOne}
+            time={time}
+            projectDetail={projectDetail}
+            dollarSign={dollar}
+            client={client}
+          />
 
           <div className="bg-white" style={{ height: "24rem" }}>
             <div className="project__header rounded-md h-full">
@@ -452,7 +389,8 @@ function Home() {
               </div>
             </div>
           </div>
-        </div>
+
+        </article>
       </section>
       <section className="about w-screen relative px-32 mt-10">
         <div style={{left: '32rem', top: '-1rem', zIndex: '-999'}} className="h-32 w-32 bg-red-300 absolute"></div>
@@ -476,105 +414,9 @@ function Home() {
           </div>
         </div>
       </section>
-      <section className="subscribe px-14 mt-10">
-        <div className="px-32 h-72 rounded-lg py-5 bg-gradient-to-r from-pink-400 via-red-500 to-yellow-500 text-center">
-          <h4>Subscribe to the news-letter to recieve latest informtion about our services</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices aliquam sit vestibulum, duis nunc, velit. Bibendum egestas eleifend lacus proin ultrices ut tristique. Vitae phasellus mauris lectus pharetra dolor, hendrerit dictum</p>
-          <form className="w-full mt-10 relative">
-            <input className="w-full outline-none rounded-full py-3 px-5" placeholder="input your email address for best offers" />
-            <button style={{right: '0.1rem', top: '0.2rem'}} className="text-white bg-red-400 px-10 py-2 absolute rounded-full">Subscribe</button>
-          </form>
-        </div>
-      </section>
-      <section className="contact w-screen px-32 mt-10">
-        <form className="w-full px-14 py-3 bg-gray-300">
-          <h2 className="mb-5">Contact form</h2>
-          <div className="w-4/5 mb-5">
-              <label htmlFor="name">Name</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                className="w-full px-4 py-2 text-gray-600 rounded-md outline-none md:px-8 focus:shadow-xl" placeholder="Full Name"/>
-          </div>
-          <div className="w-4/5 mb-5">
-              <label htmlFor="email">Email</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                className="w-full px-4 py-2 text-gray-600 rounded-md outline-none md:px-8 focus:shadow-xl" placeholder="Full Name"/>
-          </div>
-          <div className="w-4/5 mb-5">
-              <label htmlFor="message">Message</label>
-              <textarea
-                rows="7"
-                id="message"
-                name="message"
-                className="w-full px-4 py-2 text-gray-600 rounded-md outline-none md:px-8 focus:shadow-xl">
-                </textarea>
-          </div>
-          <div className="w-4/5 mb-5">
-              <button style={{width: "222px"}} type="button" className="py-2 bg-white text-center rounded-full">Envoyez</button>
-          </div>
-        </form>
-      </section>
-      <footer class="w-screen bg-gray-900 px-20 py-10 mt-10">
-        <div className="flex">
-        	<div className="flex flex-col lg:flex-row">
-        		<div className="mr-20 mb-10">
-        			<h2 className="uppercase text-xl font-bold text-white">Address</h2>
-        			<a href="/" className="block font-thin mb-2 text-white">Comapny Name</a>
-        			<a href="/about" className="block font-thin mb-2 text-white">+977-981234567</a>
-        			<a href="/career" className="block font-thin mb-2 text-white">Sales@mycompany.com</a>
-        			<a href="/courses" className="block font-thin mb-2 text-white">technical@myconpany.com</a>
-        		</div>
-        	</div>
-        	<div className="mr-20 mb-10">
-        		<h2 className="uppercase text-xl font-bold text-white">Our Services</h2>
-        		<a href="#test" className="block font-thin mb-2 text-white">
-        			Marketing
-        		</a>
-        		<a href="#test" className="block font-thin mb-2 text-white">
-        			Education
-        		</a>
-        		<a href="#test" className="block font-thin text-white">
-        			System development
-        		</a>
-            <a href="#test" className="block font-thin text-white">
-              Merge & Acquisition
-            </a>
-        	</div>
-
-          <div className="mr-20 mb-10">
-            <h2 className="uppercase text-xl font-bold text-white">Links</h2>
-            <a href="#test" className="block font-thin mb-2 text-white">
-              Projects
-            </a>
-            <a href="#test" className="block font-thin mb-2 text-white">
-              Our Team
-            </a>
-            <a href="#test" className="block font-thin text-white">
-              Our Service
-            </a>
-            <a href="#test" className="block font-thin text-white">
-              Blog
-            </a>
-          </div>
-
-          <div className="mr-20 mb-10">
-            <h2 className="uppercase text-xl font-bold text-white">Town (Head Office)</h2>
-            <a href="#test" className="block font-thin mb-2 text-white">
-              +977-981234567
-            </a>
-            <a href="#test" className="block font-thin mb-2 text-white">
-              760 Market Street, floor 10
-              San Francisco, CA, 94102
-            </a>
-          </div>
-        </div>
-        <p className="text-center text-center">copyright, company@2021</p>
-      </footer>
+      <Subscribe />
+      <Contact />
+      <Footer />
     </>
   );
 }
