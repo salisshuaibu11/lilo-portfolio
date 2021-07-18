@@ -4,7 +4,6 @@ import contact from "../assets/images/contact_header_image.png";
 
 import ContactComponent from "../components/Contact";
 import Subscribe from "../components/Subscribe";
-import Footer from "../components/Footer/Footer";
 
 import "./styles/Contact.css";
 
@@ -91,7 +90,6 @@ function Contact() {
           </div>
         </div>
       </section>
-      <Footer />
     </>
   )
 }

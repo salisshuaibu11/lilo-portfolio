@@ -2,13 +2,8 @@ import React from 'react';
 
 import './ProjectSmall.css';
 
-import time from "../../assets/icons/time.svg";
-import userOne from "../../assets/images/user.png";
-import client from "../../assets/icons/client.svg";
-import projectDetail from "../../assets/icons/project.svg";
-import dollar from "../../assets/icons/dollar.svg";
 
-const ProjectSmall = ( props )=>{
+const ProjectSmall = ( {time, userOne, client, projectDetail, dollar} )=>{
 	return (
 		<div className="project-small rounded-md h-full">
       <div className="project-small__header">

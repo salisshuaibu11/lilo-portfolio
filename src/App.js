@@ -23,16 +23,16 @@ function App() {
           <Route path='/' exact>
             <Home />
           </Route>
-          <Route path='/projects' exact>
+          <Route path='/projects'>
             <Projects />
           </Route>
-          <Route path='/catalogue' exact>
+          <Route path='/catalogue'>
             <Catalogue />
           </Route>
-          <Route path='/signup' exact>
+          <Route path='/signup'>
             <Signup />
           </Route>
-          <Route path='/contact' exact>
+          <Route path='/contact'>
             <Contact />
           </Route>
           <Redirect to='/' />

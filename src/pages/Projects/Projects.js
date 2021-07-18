@@ -7,21 +7,21 @@ import UpComingTwo from '../../assets/images/upcoming-project2.png';
 import UIUXBanner from '../../assets/images/banner-design 1.png';
 import { ReactComponent as LetsTalk } from "../../assets/icons/Vector.svg";
 import { ReactComponent as ArrowRight } from "../../assets/icons/Vector (1).svg";
-/* 
+/*
 import featureFirstIcon from "../../assets/images/featureFirst.png";
 import featureSecondIcon from "../../assets/images/featureSecond.png";
 import featureThirdIcon from "../../assets/images/featureThird.png";
 import about from "../../assets/images/about.png";
 import contactImage from "../../assets/images/contact.png";
 
-import users from "../../assets/icons/user.svg";
-import project from "../../assets/icons/project.svg";
-import client from "../../assets/icons/client.svg";
-
-import projectDetail from "../../assets/icons/project.svg";
-import dollar from "../../assets/icons/dollar.svg";
-
  */
+
+ import client from "../../assets/icons/client.svg";
+ import time from "../../assets/icons/time.svg";
+ import user from "../../assets/images/user.png";
+ import project from "../../assets/icons/project.svg";
+ import dollar from "../../assets/icons/dollar.svg";
+
 import ProjectSmall from '../../components/Project/ProjectSmall';
 import Companies from '../../components/Companies';
 
@@ -43,14 +43,14 @@ function Projects() {
                 volutpat.
               </p>
               <label for="input" class="flex flex-row rounded-md h-14 ml-3 mr-9">
-                <input type="text" name="input" className='w-5/6 rounded-l-md'/>
+                <input type="text" name="input" className='w-5/6 text-black pl-2 rounded-l-md'/>
                 <div style={{ backgroundColor: "#FF5C00" }} className='w-1/6 rounded-r-md px-11 py-4'>/</div>
               </label>
             </div>
             <div className="mt-10 flex flex-row relative">
               <img src={LetsStartImage} alt="Lets start" width='60' height='60'/>
               <span className='bg-gray-800 rounded-md m-0 mt-4 h-6 w-max px-2'>Lets Chat</span>
-              <LetsTalk 
+              <LetsTalk
                 alt="Lets Talk"
                 className='w-8 h-8 absolute -bottom-2 left-10' />
               {/* space-x-4
@@ -75,13 +75,13 @@ function Projects() {
           </article>
         </div>
       </section>
-      <section className="bg-gray-200 w-full header__companies flex justify-evenly">
+      <section className="bg-gray-200 w-full flex-wrap header__companies flex justify-evenly">
         <Companies />
       </section>
       <section className="bg-white text-black w-screen mt-1 px-14 h-50">
         <div
           style={{ height: "fit-content" }}
-          className="py-10 grid grid-cols-3 gap-5"
+          className="py-10 grid grid sm:grid-cols-2 grid-cols-1 xl:grid-cols-3 gap-5"
         >
           <div className="bg-white" style={{ height: "24rem" }}>
             <h1 className="text-2xl font-bold">
@@ -100,7 +100,12 @@ function Projects() {
             emptyFive.fill(0, 0).map((e, i)=>{
               return (
                 <div className="bg-white" style={{ height: "24rem" }} key={i}>
-                  <ProjectSmall />
+                <ProjectSmall
+                  time={time}
+                  userOne={user}
+                  client={client}
+                  projectDetail={project}
+                  dollar={dollar}/>
                 </div>
               );
             })
@@ -120,12 +125,12 @@ function Projects() {
             <div className='bg-checkerWhite w-9/12 h-max rounded-bl-lg'></div>
           </div>
           <div className="bg-cartonBrown py-5 flex flex-col relative rounded-b-lg rounded-tr-lg">
-            <p className="my-2 mx-20 px-20 text-center">
+            <p className="my-2 mx-20 xl:px-14 px-2 text-center">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu
               vitae sit congue venenatis hac viverra imperdiet viverra
               volutpat.
             </p>
-            <div className='flex flex-row space-x-6 text-center text-xl m-auto'>
+            <div className='flex px-10 flex-row flex-wrap space-y-0 xl:space-x-6 text-center text-xl m-auto'>
               <p className='border-b-2 border-black font-bold'>All Project</p>
               <p>Marketing Project</p>
               <p>Programming Project</p>
@@ -136,13 +141,18 @@ function Projects() {
         {/* Main */}
         <div
           style={{ height: "fit-content" }}
-          className="py-10 grid grid-cols-3 gap-5"
+          className="py-10 grid grid sm:grid-cols-2 grid-cols-1 xl:grid-cols-3 gap-5"
         >
           {
             emptySix.fill(0, 0).map((e, i)=>{
               return (
                 <div className="bg-white" style={{ height: "24rem" }} key={i}>
-                  <ProjectSmall />
+                  <ProjectSmall
+                    time={time}
+                    userOne={user}
+                    client={client}
+                    projectDetail={project}
+                    dollar={dollar}/>
                 </div>
               );
             })
@@ -166,13 +176,13 @@ function Projects() {
           style={{ height: "fit-content" }}
           className="py-10 flex flex-col"
         >
-          <div className='flex flex-row'>
-            <div className='h-max w-1/2'>
+          <div className='grid grid-cols-1 xl:grid-cols-2'>
+            <div className='h-max'>
               <img src={UpComingOne} alt="Upcoming Project One" className='h-max' />
             </div>
-            <div className='w-1/2'>
+            <div className='self-center'>
               <h2 className='text-xl font-bold text-center py-5'>Project Title</h2>
-              <p className='px-10 py-10 text-sm text-lg-base'>
+              <p className='xl:px-10 px- py-10 text-justify text-lg'>
                 Lorem ipsum dolor sit amet consectetur adipisicing,
                 elit. Fugiat, quidem nobis veritatis voluptatibus quo
                 mollitia, voluptatum, eaque blanditiis recusandae
@@ -191,13 +201,10 @@ function Projects() {
               </p>
             </div>
           </div>
-          <div className='flex flex-row-reverse'>
-            <div className='h-max w-1/2'>
-              <img src={UpComingTwo} alt="Upcoming Project Two" className='h-max' />
-            </div>
-            <div className='w-1/2'>
+          <div className='grid grid-cols-1 xl:grid-cols-2'>
+            <div className='self-center'>
               <h2 className='text-xl font-bold text-center py-5'>Project Title</h2>
-              <p className='px-10 py-10 text-sm text-lg-base'>
+              <p className='xl:px-10 px-0 py-10 text-justify text-lg'>
                 Lorem ipsum dolor sit amet consectetur adipisicing,
                 elit. Fugiat, quidem nobis veritatis voluptatibus quo
                 mollitia, voluptatum, eaque blanditiis recusandae
@@ -214,6 +221,9 @@ function Projects() {
                 temporibus iure, quibusdam amet ea! Adipisci,
                 impedit. Repudiandae totam, modi eius!
               </p>
+            </div>
+            <div className='h-max'>
+              <img src={UpComingTwo} alt="Upcoming Project Two" className='h-max' />
             </div>
           </div>
         </div>
