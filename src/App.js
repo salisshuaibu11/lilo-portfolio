@@ -13,6 +13,7 @@ import Signup from "./pages/Signup";
 import Contact from "./pages/Contact";
 import Catalogue from "./pages/Catalogue";
 import Projects from "./pages/Projects/Projects";
+import ProjectDetails from "./pages/Projects/Project-Detail";
 
 function App() {
   return (
@@ -34,6 +35,9 @@ function App() {
           </Route>
           <Route path='/contact'>
             <Contact />
+          </Route>
+          <Route path='/project/:projectId'>
+            <ProjectDetails />
           </Route>
           <Redirect to='/' />
         </Switch>

@@ -19,11 +19,11 @@ const Footer = () => {
           <div className="text-white">
             <h5>Social Media</h5>
             <div className="space-x-5">
-              <a href="#"><FontAwesomeIcon icon={faFacebookF} /></a>
-              <a href="#"><FontAwesomeIcon icon={faInstagram} /></a>
+              <a href="#facebook"><FontAwesomeIcon icon={faFacebookF} /></a>
+              <a href="#insta"><FontAwesomeIcon icon={faInstagram} /></a>
 
-              <a href="#"><FontAwesomeIcon icon={faTwitter} /></a>
-              <a href="#"><FontAwesomeIcon icon={faLinkedinIn} /></a>
+              <a href="#twitter"><FontAwesomeIcon icon={faTwitter} /></a>
+              <a href="#linkedin"><FontAwesomeIcon icon={faLinkedinIn} /></a>
             </div>
           </div>
         </div>
