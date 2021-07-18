@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 import './ProjectSmall.css';
 
@@ -46,12 +47,14 @@ const ProjectSmall = ( {time, userOne, client, projectDetail, dollar} )=>{
       </div>
       <div className="project-small__footer text-center py-3">
         <p className="mb-2">Lorem ipsum dolor sit amet!</p>
-        <button
-          className="rounded-full text-white py-2"
-          style={{ width: "80%", backgroundColor: "#FF5C00" }}
-        >
-          More Details
-        </button>
+        <NavLink to='/project/1'>
+          <button
+            className="rounded-full text-white py-2"
+            style={{ width: "80%", backgroundColor: "#FF5C00" }}
+          >
+            More Details
+          </button>
+        </NavLink>
       </div>
     </div>
 	);

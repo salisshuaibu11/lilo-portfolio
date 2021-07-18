@@ -7,20 +7,12 @@ import UpComingTwo from '../../assets/images/upcoming-project2.png';
 import UIUXBanner from '../../assets/images/banner-design 1.png';
 import { ReactComponent as LetsTalk } from "../../assets/icons/Vector.svg";
 import { ReactComponent as ArrowRight } from "../../assets/icons/Vector (1).svg";
-/*
-import featureFirstIcon from "../../assets/images/featureFirst.png";
-import featureSecondIcon from "../../assets/images/featureSecond.png";
-import featureThirdIcon from "../../assets/images/featureThird.png";
-import about from "../../assets/images/about.png";
-import contactImage from "../../assets/images/contact.png";
 
- */
-
- import client from "../../assets/icons/client.svg";
- import time from "../../assets/icons/time.svg";
- import user from "../../assets/images/user.png";
- import project from "../../assets/icons/project.svg";
- import dollar from "../../assets/icons/dollar.svg";
+import client from "../../assets/icons/client.svg";
+import time from "../../assets/icons/time.svg";
+import user from "../../assets/images/user.png";
+import project from "../../assets/icons/project.svg";
+import dollar from "../../assets/icons/dollar.svg";
 
 import ProjectSmall from '../../components/Project/ProjectSmall';
 import Companies from '../../components/Companies';
