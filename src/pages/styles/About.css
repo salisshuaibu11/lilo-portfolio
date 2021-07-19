@@ -1,0 +1,16 @@
+.about__page {
+  background: url(../../assets/images/about/banner.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.about__group > span {
+  padding: 25px;
+  border: 1px solid gray;
+}
+
+@media only screen and (max-width: 600px) {
+  .about__group > span {
+    padding: 0;
+  }
+}

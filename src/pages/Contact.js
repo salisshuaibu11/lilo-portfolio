@@ -6,6 +6,7 @@ import ContactComponent from "../components/Contact";
 import Subscribe from "../components/Subscribe";
 
 import "./styles/Contact.css";
+import { NavLink } from "react-router-dom";
 
 function Contact() {
   return (
@@ -14,16 +15,16 @@ function Contact() {
         <nav className="flex justify-end pr-5 w-screen py-2">
           <ul className="flex items-center space-x-3">
             <li className="">
-              <a href="/">Home</a>
+              <NavLink to="/">Home</NavLink>
             </li>
             <li>
-              <a href="/">About us</a>
+              <NavLink to="/about">About us</NavLink>
             </li>
             <li>
-              <a href="/">Projects</a>
+              <NavLink to="/projects">Projects</NavLink>
             </li>
             <li>
-              <a href="/">Contact us</a>
+              <NavLink to="/contact">Contact us</NavLink>
             </li>
           </ul>
         </nav>
