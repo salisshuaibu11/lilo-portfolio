@@ -6,10 +6,10 @@ import {
   Switch,
 } from "react-router-dom";
 
-//import Navigation from './components/Navigation/Navigation';
 import Footer from './components/Footer/Footer';
 import Home from "./pages/Home/Home";
-import Signup from "./pages/Signup";
+import Signup from "./pages/Auth/Signup";
+import Login from "./pages/Auth/Login";
 import Contact from "./pages/Contact";
 import Catalogue from "./pages/Catalogue";
 import Projects from "./pages/Projects/Projects";
@@ -33,14 +33,17 @@ function App() {
           <Route path='/catalogue'>
             <Catalogue />
           </Route>
-          <Route path='/signup'>
-            <Signup />
-          </Route>
           <Route path='/contact'>
             <Contact />
           </Route>
           <Route path='/project/:projectId'>
             <ProjectDetails />
+          </Route>
+          <Route path='/signup'>
+            <Signup />
+          </Route>
+          <Route path='/login'>
+            <Login />
           </Route>
           <Redirect to='/' />
         </Switch>
