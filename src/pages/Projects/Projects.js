@@ -27,7 +27,7 @@ function Projects() {
   return (
     <>
       <section className="bg-gray-900 text-white w-screen mt-1 px-14 h-50">
-        <nav className="flex justify-end pr-24 w-screen text-white py-2">
+        <nav className="flex justify-end xl:pr-24 pr-12 w-screen text-white py-2">
           <ul className="flex items-cente5 px-5 space-x-3">
             <li className="">
               <NavLink to="/">Home</NavLink>
@@ -44,7 +44,7 @@ function Projects() {
           </ul>
         </nav>
         <div className="w-full h-full flex">
-          <div className="mt-24 p-16 w-2/3">
+          <div className="mt-24 xl:p-16 p-0 xl:w-2/3 w-full">
             <div className="">
               <h1 className="text-2xl">
                 Achieve our goal with professionals or guarantee success
@@ -75,7 +75,7 @@ function Projects() {
               */}
             </div>
           </div>
-          <article className="w-1/3 flex items-center relative">
+          <article className="w-1/3 xl:flex hidden items-center relative">
             <div style={{
               backgroundImage: `url(${HeaderImage})`,
               backgroundPosition: 'center',
@@ -173,7 +173,7 @@ function Projects() {
           }
         </div>
       </section>
-      <section className="bg-white text-black w-screen mt-1 p-14 h-50">
+      <section className="bg-white text-black w-screen mt-1 xl:p-14 p-5 h-50">
         {/* Header */}
         <div className="w-full h-full flex flex-col">
           <h1 className="text-2xl text-center">

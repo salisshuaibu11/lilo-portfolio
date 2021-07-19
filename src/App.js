@@ -39,7 +39,7 @@ function App() {
           <Route path='/project/:projectId'>
             <ProjectDetails />
           </Route>
-          <Route path='/signup'>
+          <Route path='/register'>
             <Signup />
           </Route>
           <Route path='/login'>

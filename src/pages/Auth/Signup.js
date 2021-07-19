@@ -58,6 +58,32 @@ function Signup() {
               />
           </div>
           <div className="w-full flex justify-between items-center mb-5">
+              <label htmlFor="date">Birth Date</label>
+              <input
+                type="date"
+                id="date"
+                name="date"
+                className="w-full px-4 py-2 text-gray-600 bg-gray-200 rounded-full outline-none md:px-8 focus:shadow-xl"
+              />
+          </div>
+          <div className="w-full flex justify-between items-center mb-5">
+              <p>Country</p>
+              <div className="grid w-9/12 pl-10 gap-5 grid-cols-2">
+                <select className="w-full px-4 py-2 text-gray-600 bg-gray-200 rounded-full outline-none md:px-8 focus:shadow-xl">
+                  <option>Egypt</option>
+                </select>
+                <div>
+                  <input
+                    type="text"
+                    id="postalcode"
+                    name="postalcode"
+                    placeholder="Postal Code"
+                    className="w-full px-4 py-2 text-gray-600 bg-gray-200 rounded-full outline-none md:px-8 focus:shadow-xl"
+                  />
+                </div>
+              </div>
+          </div>
+          <div className="w-full flex justify-between items-center mb-5">
               <label htmlFor="name">City</label>
               <input
                 type="text"
