@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 import "../styles/Projects.css";
 import HeaderImage from "../../assets/images/projects-headerImage.png";
 import LetsStartImage from "../../assets/images/Ellipse 86.png";
@@ -7,6 +9,7 @@ import UpComingTwo from '../../assets/images/upcoming-project2.png';
 import UIUXBanner from '../../assets/images/banner-design 1.png';
 import { ReactComponent as LetsTalk } from "../../assets/icons/Vector.svg";
 import { ReactComponent as ArrowRight } from "../../assets/icons/Vector (1).svg";
+import { ReactComponent as SearchGlass } from "../../assets/icons/Group 19search.svg";
 
 import client from "../../assets/icons/client.svg";
 import time from "../../assets/icons/time.svg";
@@ -17,7 +20,6 @@ import dollar from "../../assets/icons/dollar.svg";
 import ProjectSmall from '../../components/Project/ProjectSmall';
 import Companies from '../../components/Companies';
 
-import { NavLink } from "react-router-dom";
 
 function Projects() {
   const emptyFive = new Array(5);
@@ -54,7 +56,9 @@ function Projects() {
               </p>
               <label for="input" class="flex flex-row rounded-md h-14 ml-3 mr-9">
                 <input type="text" name="input" className='w-5/6 text-black pl-2 rounded-l-md'/>
-                <div style={{ backgroundColor: "#FF5C00" }} className='w-1/6 rounded-r-md px-11 py-4'>/</div>
+                <div style={{ backgroundColor: "#FF5C00" }} className='w-1/6 rounded-r-md px-11 py-4'>
+                  <SearchGlass />
+                </div>
               </label>
             </div>
             <div className="mt-10 flex flex-row relative">

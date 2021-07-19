@@ -6,7 +6,6 @@ import {
   Switch,
 } from "react-router-dom";
 
-//import Navigation from './components/Navigation/Navigation';
 import Footer from './components/Footer/Footer';
 import Home from "./pages/Home/Home";
 import Signup from "./pages/Auth/Signup";
@@ -23,26 +22,21 @@ function App() {
       <Router>
         <Switch>
           <Route path='/' exact>
-            <Navigation />
             <Home />
           </Route>
           <Route path='/projects'>
-            <Navigation />
             <Projects />
           </Route>
           <Route path='/about'>
             <About />
           </Route>
           <Route path='/catalogue'>
-            <Navigation />
             <Catalogue />
           </Route>
           <Route path='/contact'>
-            <Navigation />
             <Contact />
           </Route>
           <Route path='/project/:projectId'>
-            <Navigation />
             <ProjectDetails />
           </Route>
           <Route path='/signup'>

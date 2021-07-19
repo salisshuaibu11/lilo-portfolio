@@ -1,4 +1,5 @@
 import "../styles/Signup.css";
+import { NavLink, Link } from "react-router-dom";
 
 import image1 from "../../assets/images/signupImage.png";
 import image2 from "../../assets/images/signupImage2.png";
@@ -17,10 +18,10 @@ function Login() {
         </div>
         <div className="header__center text-center py-3 text-white">
           <div className="header__center__top space-x-5">
-            <a href="/home">Home</a>
-            <a href="/about">About Us</a>
-            <a href="/projects">Project</a>
-            <a href="/contact">Contact Us</a>
+            <NavLink to="/home">Home</NavLink>
+            <NavLink to="/about">About Us</NavLink>
+            <NavLink to="/projects">Project</NavLink>
+            <NavLink to="/contact">Contact Us</NavLink>
           </div>
           <div className="header__center__bottom text-5xl">
             Login
@@ -64,7 +65,7 @@ function Login() {
             </div>
             <div className='flex flex-row mx-20 justify-between'>
               <button className='rounded-full bg-sky-600 text-white h-10 py-1 px-5'>Login</button>
-              <p className='py-1 ml-3'>I don't have an account yet <span className='font-bold'>Sign Up?</span></p>
+              <p className='py-1 ml-3'>I don't have an account yet <Link className='font-bold' to='/signup'>Sign Up?</Link></p>
             </div>
           </form>
           <div className='w-2/3 mx-auto'>
