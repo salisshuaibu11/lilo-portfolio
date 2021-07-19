@@ -17,12 +17,30 @@ import dollar from "../../assets/icons/dollar.svg";
 import ProjectSmall from '../../components/Project/ProjectSmall';
 import Companies from '../../components/Companies';
 
+import { NavLink } from "react-router-dom";
+
 function Projects() {
   const emptyFive = new Array(5);
   const emptySix = new Array(6);
   return (
     <>
       <section className="bg-gray-900 text-white w-screen mt-1 px-14 h-50">
+        <nav className="flex justify-end pr-24 w-screen text-white py-2">
+          <ul className="flex items-cente5 px-5 space-x-3">
+            <li className="">
+              <NavLink to="/">Home</NavLink>
+            </li>
+            <li>
+              <NavLink to="/about">About us</NavLink>
+            </li>
+            <li>
+              <NavLink to="/projects">Projects</NavLink>
+            </li>
+            <li>
+              <NavLink to="/contact">Contact us</NavLink>
+            </li>
+          </ul>
+        </nav>
         <div className="w-full h-full flex">
           <div className="mt-24 p-16 w-2/3">
             <div className="">
