@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 import "../styles/Projects.css";
 import HeaderImage from "../../assets/images/projects-headerImage.png";
 import LetsStartImage from "../../assets/images/Ellipse 86.png";
@@ -7,6 +9,7 @@ import UpComingTwo from '../../assets/images/upcoming-project2.png';
 import UIUXBanner from '../../assets/images/banner-design 1.png';
 import { ReactComponent as LetsTalk } from "../../assets/icons/Vector.svg";
 import { ReactComponent as ArrowRight } from "../../assets/icons/Vector (1).svg";
+import { ReactComponent as SearchGlass } from "../../assets/icons/Group 19search.svg";
 
 import client from "../../assets/icons/client.svg";
 import time from "../../assets/icons/time.svg";
@@ -17,12 +20,29 @@ import dollar from "../../assets/icons/dollar.svg";
 import ProjectSmall from '../../components/Project/ProjectSmall';
 import Companies from '../../components/Companies';
 
+
 function Projects() {
   const emptyFive = new Array(5);
   const emptySix = new Array(6);
   return (
     <>
       <section className="bg-gray-900 text-white w-screen mt-1 px-14 h-50">
+        <nav className="flex justify-end pr-24 w-screen text-white py-2">
+          <ul className="flex items-cente5 px-5 space-x-3">
+            <li className="">
+              <NavLink to="/">Home</NavLink>
+            </li>
+            <li>
+              <NavLink to="/about">About us</NavLink>
+            </li>
+            <li>
+              <NavLink to="/projects">Projects</NavLink>
+            </li>
+            <li>
+              <NavLink to="/contact">Contact us</NavLink>
+            </li>
+          </ul>
+        </nav>
         <div className="w-full h-full flex">
           <div className="mt-24 p-16 w-2/3">
             <div className="">
@@ -36,7 +56,9 @@ function Projects() {
               </p>
               <label for="input" class="flex flex-row rounded-md h-14 ml-3 mr-9">
                 <input type="text" name="input" className='w-5/6 text-black pl-2 rounded-l-md'/>
-                <div style={{ backgroundColor: "#FF5C00" }} className='w-1/6 rounded-r-md px-11 py-4'>/</div>
+                <div style={{ backgroundColor: "#FF5C00" }} className='w-1/6 rounded-r-md px-11 py-4'>
+                  <SearchGlass />
+                </div>
               </label>
             </div>
             <div className="mt-10 flex flex-row relative">

@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from "react-router-dom";
 
 import Companies from '../../components/Companies';
 import ProjectSmall from '../../components/Project/ProjectSmall';
@@ -42,6 +43,22 @@ const ProjectDetails = ()=>{
 	return (
 		<>
       <section className="bg-gray-900 text-white w-screen mt-1 px-14 h-screen">
+        <nav className="flex justify-end pr-24 w-screen text-white py-2">
+          <ul className="flex items-cente5 px-5 space-x-3">
+            <li className="">
+              <NavLink to="/">Home</NavLink>
+            </li>
+            <li>
+              <NavLink to="/about">About us</NavLink>
+            </li>
+            <li>
+              <NavLink to="/projects">Projects</NavLink>
+            </li>
+            <li>
+              <NavLink to="/contact">Contact us</NavLink>
+            </li>
+          </ul>
+        </nav>
         <div className="w-full h-full flex relative z-0" style={{
               backgroundImage: `url(${HeaderImage})`,
               backgroundPosition: 'center',

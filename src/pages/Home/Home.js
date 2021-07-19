@@ -25,14 +25,17 @@ import Companies from '../../components/Companies';
 import Contact from "../../components/Contact";
 import Subscribe from "../../components/Subscribe";
 
+import Navigation from "../../components/Navigation/Navigation";
+
 function Home() {
   const empty = new Array(3);
   return (
     <>
+      <Navigation />
       <section className="w-screen mt-1 home h-screen">
         <div className="w-full px-10 flex" style={{height: 'fit-content'}}>
-          <div className="home__left self-center w-screen  py-16">
-            <div className="home__top">
+          <div className="home__left flex-1 self-center w-screen  py-16">
+            <div className="home__top w-full">
               <h1 className="text-2xl">
                 Empower your <span style={{ color: "#FF5C00" }}>Business</span>,
                 Skill, Education and Project with{" "}
@@ -59,7 +62,7 @@ function Home() {
               </button>
             </div>
           </div>
-          <article className="home__right flex items-center">
+          <article className="home__right hidden xl:flex items-center">
             <div className="home__right__cards z-50">
               <div className="home__right__top space-y-4">
                 <div className="flex bg-white shadow-lg management rounded-full py-3 px-10 items-center space-x-3">

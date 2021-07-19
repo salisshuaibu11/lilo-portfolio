@@ -1,4 +1,5 @@
 import "../styles/Signup.css";
+import { NavLink } from "react-router-dom";
 
 import image1 from "../../assets/images/signupImage.png";
 import image2 from "../../assets/images/signupImage2.png";
@@ -13,10 +14,10 @@ function Signup() {
         </div>
         <div className="header__center text-center py-3 text-white">
           <div className="header__center__top space-x-5">
-            <a href="#home">Home</a>
-            <a href="#about-us">About Us</a>
-            <a href="#project">Project</a>
-            <a href="#contact-us">Contact Us</a>
+            <NavLink to="/home">Home</NavLink>
+            <NavLink to="/about-us">About Us</NavLink>
+            <NavLink to="/project">Project</NavLink>
+            <NavLink to="/contact-us">Contact Us</NavLink>
           </div>
           <div className="header__center__bottom text-5xl">
             Sign Up
