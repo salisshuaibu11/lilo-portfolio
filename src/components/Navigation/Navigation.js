@@ -24,7 +24,7 @@ const Navigation = () => {
           style={{ backgroundColor: "#FF5C00" }}
           className="px-6 py-1 rounded-md text-white"
         >
-          <NavLink to="/">Enroll now</NavLink>
+          <NavLink to="/signup">Enroll now</NavLink>
         </li>
       </ul>
     </nav>

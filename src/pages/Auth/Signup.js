@@ -1,8 +1,8 @@
-import "./styles/Signup.css";
+import "../styles/Signup.css";
 
-import image1 from "../assets/images/signupImage.png";
-import image2 from "../assets/images/signupImage2.png";
-import signup from "../assets/icons/signup.svg";
+import image1 from "../../assets/images/signupImage.png";
+import image2 from "../../assets/images/signupImage2.png";
+import signup from "../../assets/icons/signup.svg";
 
 function Signup() {
   return (
