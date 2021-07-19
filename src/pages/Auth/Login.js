@@ -2,7 +2,6 @@ import "../styles/Signup.css";
 
 import image1 from "../../assets/images/signupImage.png";
 import image2 from "../../assets/images/signupImage2.png";
-import signup from "../../assets/icons/signup.svg";
 import ladyWithCmp from '../../assets/images/login.png';
 import { ReactComponent as GooglePlus } from '../../assets/icons/gmail.svg';
 import { ReactComponent as Facebook } from '../../assets/icons/FB.svg';
